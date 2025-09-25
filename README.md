@@ -17,7 +17,7 @@ This project was developed as part of a security drone internship at Electronic 
 - **Performance**: Optimized for edge devices with Movidius Neural Compute Stick.
 
 ## System Architecture
-![System Diagram](media/system_diagram.png)
+![System Diagram](media/2025-09-25_23-33.png)
 *System overview showing the complete pipeline*
 
 - **Raspberry Pi Side**: Captures frames, controls gimbal via signals, streams video/data via UDP.
