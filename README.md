@@ -1,4 +1,4 @@
-# Aerial Surveillance Gimbal System
+# Aerial Surveillance Gimbal System for UAV Defence & Security applications
 
 ## Overview
 
