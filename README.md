@@ -27,7 +27,7 @@ This project was developed as part of a security drone internship at Electronic 
 
 
 ## Installation
-1. Clone the repo: `git clone https://github.com/yourusername/smart-gimbal-object-tracker.git`
+1. Clone the repo: `git clone https://github.com/aminemoussi/Object_detection_and_tracking_for_UAV_application.git`
 2. Install dependencies: `pip install -r requirements.txt` (Includes ultralytics, opencv-python, deepsort-realtime, etc.)
 3. Download models: Place YOLOv8s.pt and HyperDet weights in `/models/` (links in models/README.md).
 4. Hardware setup: Connect Pi Camera to Raspberry Pi 5, gimbal to Storm32 controller, Movidius stick for acceleration.
