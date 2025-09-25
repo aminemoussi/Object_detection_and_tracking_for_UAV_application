@@ -2,7 +2,7 @@
 
 ## Overview
 
-A hardware-software system for real-time object detection and tracking using a Raspberry Pi-controlled gimbal. Detects and tracks targets (e.g., vehicles, pedestrians, tanks, armed vehicles, soldiers) in aerial imagery, with integration to a ground control UI. Achieved 90%+ detection accuracy and ~5 FPS inference on Raspberry Pi + Movidus NCS 2, 5-12 FPS on CPU (intel I3 11th gen), and 40 FPS on Nvidia RTX 4060 8G.
+A hardware-software system for real-time object detection and tracking using a Raspberry Pi-controlled gimbal. Detects and tracks targets (e.g., vehicles, pedestrians, tanks, armed vehicles, soldiers) in aerial imagery, with integration to a ground control UI.
 
 ![Demo GIF](media/demo.gif)
 *demo showcasing the system with the PC configured as the processing unit*
@@ -24,6 +24,14 @@ This project was developed as part of a security drone internship at Electronic 
 - **PC Side**: Receives stream, runs inference, displays UI, allows operator to select/track objects and what models to use.
   
   *P.S: the inference runing unit could be configures to be either the raspberry + NCS 2, PC's CPU or GPU, in this demonstration the CPU was used to obtain the average results*
+
+## Results & Metrics
+- Accuracy: 90%+ on custom dataset (mAP@0.5 ~0.85 for YOLOv8s).
+- FPS: ~5 FPS inference on Raspberry Pi + Movidus NCS 2, 5-12 FPS on CPU (intel I3 11th gen), and 40 FPS on Nvidia RTX 4060 8G
+- Screenshots:
+  - Detection output: ![Detection Example](images/detection-screenshot.png)
+  - UI Dashboard: ![UI Screenshot](media/ui-screenshot.png)
+  - Gimbal Tracking: ![Tracking Example](images/tracking-screenshot.png)
 
 
 ## Installation
