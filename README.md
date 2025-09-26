@@ -25,6 +25,14 @@ This project was developed as part of a security drone internship at Electronic 
   
   *P.S: the inference runing unit could be configures to be either the raspberry + NCS 2, PC's CPU or GPU, in this demonstration the CPU was used to obtain the average results*
 
+### Hardware Setup
+- **Main Controller**: ![Raspberry Pi 4 or 5](media/raspberry_pi.png)
+- **AI Accelerator**: ![Intel Movidius Neural Compute Stick](media/ncs.png)
+- **Camera**: ![Pi Camera v2](media/raspberry_pi.png)
+- **Gimbal**: ![3-axis gimbal](media/gimbal1.png)
+- **Gimbal Controller**: ![Storm32 BGCC](media/gimbal2.png)
+- **Communication**: UDP socket streaming
+
 ## Results & Metrics
 - Accuracy: 90%+ on custom dataset (mAP@0.5 ~0.85 for YOLOv8s).
 - FPS: ~5 FPS inference on Raspberry Pi + Movidus NCS 2, 5-12 FPS on CPU (intel I3 11th gen), and 40 FPS on Nvidia RTX 4060 8G
