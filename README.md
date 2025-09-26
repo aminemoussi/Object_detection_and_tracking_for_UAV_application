@@ -25,21 +25,48 @@ This project was developed as part of a security drone internship at Electronic 
   
   *P.S: the inference runing unit could be configures to be either the raspberry + NCS 2, PC's CPU or GPU, in this demonstration the CPU was used to obtain the average results*
 
+
+## 📁 Repository Structure
+```
+Object_detection_and_tracking_for_UAV_application/
+│
+├── 📄 README.md              # Main project documentation
+├── 📁 docs/                  # Additional documentation
+│   ├── system_diagram.png    # Your architecture diagram
+│   ├── hardware_setup/       # Photos of components
+│   └── project_report.pdf    # Your academic report
+├── 📁 src/                   # Source code
+│   ├── model_training/       # Training scripts
+│   ├── raspberry_pi/         # Pi deployment code
+│   ├── ground_control_ui/    # UI application code
+│   └── gimbal_control/       # Motor control scripts
+├── 📁 models/                # Trained model weights
+│   ├── yolov8s_best.pt
+│   └── hyperdet_cnn_best.pt
+├── 📁 media/                 # Demo materials
+│   ├── demo_video.mp4        # Short demonstration
+│   ├── screenshots/          # UI and detection screenshots
+│   └── component_photos/     # Hardware photos
+└── 📁 datasets/              # Dataset info (links only)
+    └── dataset_sources.md
+```
+
 ### Hardware Setup
-- **Main Controller**: ![Raspberry Pi 4 or 5](media/raspberry_pi.png)
-- **AI Accelerator**: ![Intel Movidius Neural Compute Stick](media/ncs.png)
-- **Camera**: ![Pi Camera v2](media/raspberry_pi.png)
-- **Gimbal**: ![3-axis gimbal](media/gimbal1.png)
-- **Gimbal Controller**: ![Storm32 BGCC](media/gimbal2.png)
+- **Main Controller**: Raspberry Pi 4 or 5 ![Raspberry Pi 4 or 5](media/raspberry_pi.png)
+- **AI Accelerator**: Intel Movidius Neural Compute Stick 2 ![Intel Movidius Neural Compute Stick](media/ncs.png)
+- **Gimbal**: 3-axis gimbal ![3-axis gimbal](media/gimbal1.png)
+- **Gimbal Controller**: Storm32 BGCC ![Storm32 BGCC](media/gimbal2.png)
+- **Camera**: Pi Camera v2 
 - **Communication**: UDP socket streaming
 
 ## Results & Metrics
 - Accuracy: 90%+ on custom dataset (mAP@0.5 ~0.85 for YOLOv8s).
 - FPS: ~5 FPS inference on Raspberry Pi + Movidus NCS 2, 5-12 FPS on CPU (intel I3 11th gen), and 40 FPS on Nvidia RTX 4060 8G
 - Screenshots:
-  - Detection output: ![Detection Example](images/detection-screenshot.png)
   - UI Dashboard: ![UI Screenshot](media/ui-screenshot.png)
-  - Gimbal Tracking: ![Tracking Example](images/tracking-screenshot.png)
+  - Detection output: ![Detection Example](images/detection-screenshot.png)
+  - Gimbal position adjustments data: to be sent from the processing unit (PC's CPU/GPU, 6+ to the gimbal controller by the raspberry pi ![Detection Example](images/detection-screenshot.png)
+
 
 
 ## Installation
