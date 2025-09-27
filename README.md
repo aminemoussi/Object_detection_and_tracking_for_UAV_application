@@ -65,7 +65,7 @@ Object_detection_and_tracking_for_UAV_application/
 - Screenshots:
   - UI Dashboard: ![UI Screenshot](media/ui-screenshot.png)
   - Detection output: ![Detection Example](images/detection-screenshot.png)
-  - Gimbal position adjustments data: to be sent from the processing unit (PC's CPU/GPU, 6+ to the gimbal controller by the raspberry pi ![Detection Example](images/detection-screenshot.png)
+  - Gimbal position adjustments data: to be sent from the processing unit (PC's CPU/GPU, or Raspberry Pi + NCS) to the gimbal controller ![Detection Example](images/detection-screenshot.png)
 
 
 
