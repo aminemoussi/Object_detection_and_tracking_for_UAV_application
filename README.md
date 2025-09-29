@@ -30,24 +30,29 @@ This project was developed as part of a security drone internship at Electronic 
 ```
 Object_detection_and_tracking_for_UAV_application/
 │
-├── 📄 README.md              # Main project documentation
-├── 📁 docs/                  # Additional documentation
+├── 📄 README.md           # Main project documentation
+├── 📁 docs/               # Additional documentation
 │   ├── system_diagram.png    # Your architecture diagram
 │   ├── hardware_setup/       # Photos of components
 │   └── project_report.pdf    # Your academic report
-├── 📁 src/                   # Source code
+├── 📁 src/                # Source code
+│   ├── 📁 client_server/     # clent server configuration
+│       ├── server.py            # Raspberry side: It streams video frames and detection results via UDP, separate threads for frame, inference, and communication.
+│       ├── client_version2.py   # PC side: ground control station with a Tkinter GUI that receives UDP video streams and performs YOLO inference. features dual tracking    │       │                          modes (YOLO's built-in, and OpenCV's CSRT), interactive object selection via mouse clicks, and gimbal control commands.
+│       └── client_version1.py   # same as above, Simplified unified pipeline using only YOLO's persist tracking for lower CPU/GPU overhead
+│   ├── model_training/   
 │   ├── model_training/       # Training scripts
 │   ├── raspberry_pi/         # Pi deployment code
 │   ├── ground_control_ui/    # UI application code
 │   └── gimbal_control/       # Motor control scripts
-├── 📁 models/                # Trained model weights
+├── 📁 models/             # Trained model weights
 │   ├── yolov8s_best.pt
 │   └── hyperdet_cnn_best.pt
-├── 📁 media/                 # Demo materials
+├── 📁 media/              # Demo materials
 │   ├── demo_video.mp4        # Short demonstration
 │   ├── screenshots/          # UI and detection screenshots
 │   └── component_photos/     # Hardware photos
-└── 📁 datasets/              # Dataset info (links only)
+└── 📁 datasets/           # Dataset info (links only)
     └── dataset_sources.md
 ```
 
