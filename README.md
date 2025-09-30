@@ -32,26 +32,28 @@ Object_detection_and_tracking_for_UAV_application/
 │
 ├── 📄 README.md           # Main project documentation
 ├── 📁 docs/               # Additional documentation
-│   ├── system_diagram.png    # Your architecture diagram
-│   ├── hardware_setup/       # Photos of components
 │   └── project_report.pdf    # Your academic report
 ├── 📁 src/                # Source code
-│   ├── 📁 client_server/     # clent server configuration
-│       ├── server.py            # Raspberry side: It streams video frames and detection results via UDP, separate threads for frame, inference, and communication.
-│       ├── client_version2.py   # PC side: ground control station with a Tkinter GUI that receives UDP video streams and performs YOLO inference. features dual tracking    │       │                          modes (YOLO's built-in, and OpenCV's CSRT), interactive object selection via mouse clicks, and gimbal control commands.
-│       └── client_version1.py   # same as above, Simplified unified pipeline using only YOLO's persist tracking for lower CPU/GPU overhead
-│   ├── model_training/   
-│   ├── model_training/       # Training scripts
-│   ├── raspberry_pi/         # Pi deployment code
-│   ├── ground_control_ui/    # UI application code
-│   └── gimbal_control/       # Motor control scripts
+│   ├── 📁 client_server/          # clent server configuration
+│       ├── server.py                # Raspberry side: It streams video frames and detection results via UDP, separate threads for frame, inference, and communication.
+│       ├── client_version2.py       # PC side: ground control station with a Tkinter GUI that receives UDP video streams and performs YOLO inference. features dual         │       │                            tracking modes (YOLO's built-in, and OpenCV's CSRT), interactive object selection via mouse clicks, and gimbal control commands.
+│       └── client_version1.py       # same as above, Simplified unified pipeline using only YOLO's persist tracking for lower CPU/GPU overhead
+│   ├── 📁 training/               # Training scripts for many architectures (Yolovx, Faster R-CNN, Hybreddet)
+│       ├── faster_rcnn_train.ipynb  
+│   ├── 📁 data_format_converter/   
+│       ├── visdrone_process.py      #loads and processes VisDrone dataset sequences + handles image and annotation files 
+│       └── yolov8_formatter.py      # processes XML annotations to yolo format
+│   ├── 📁 testing/                # this has testing files for different tracking techniques with different models  
+│       ├── tracking_v1.py           #YOLO for real-time tracking, object selection via mouse click, displays tracking data (distance, angle, position) 
+│       ├── tracking_v2.py           #with CSRT tracker for real-time tracking
+│       ├── tracking_v3.py           #detection on a video, processes every 5th frame, resizes frames to 640x380, and saves the output with bounding boxes to video file
+│       ├── tracking_v4.py           #real-time detection on webcam feed, resolution to 640x480 at 30 FPS, processes every x (here x=3) frame for efficiency
+│       └── detection_test.py        # runs a model on a test image and visualizes detections
 ├── 📁 models/             # Trained model weights
 │   ├── yolov8s_best.pt
 │   └── hyperdet_cnn_best.pt
-├── 📁 media/              # Demo materials
-│   ├── demo_video.mp4        # Short demonstration
-│   ├── screenshots/          # UI and detection screenshots
-│   └── component_photos/     # Hardware photos
+├── 📁 media/              # Demo + screenshots + components materials...
+│   └── ...
 └── 📁 datasets/           # Dataset info (links only)
     └── dataset_sources.md
 ```
