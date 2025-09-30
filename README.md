@@ -50,7 +50,7 @@ Object_detection_and_tracking_for_UAV_application/
 │       ├── tracking_v4.py           #real-time detection on webcam feed, resolution to 640x480 at 30 FPS, processes every x (here x=3) frame for efficiency
 │       └── detection_test.py        # runs a model on a test image and visualizes detections
 ├── 📁 models/             # Trained model weights
-│   ├── yolov8s_best.pt
+│   ├── yolov11s_visdrone.pt       # yolov11 small trained on visdrone, 50 epochs, batch size = 8  
 │   └── hyperdet_cnn_best.pt
 ├── 📁 media/              # Demo + screenshots + components materials...
 │   └── ...
