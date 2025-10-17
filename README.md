@@ -65,12 +65,15 @@ Object_detection_and_tracking_for_UAV_application/
 ```
 
 ### Hardware Setup
-- **Main Controller**: Raspberry Pi 4 or 5 ![Raspberry Pi 4 or 5](media/raspberry_pi.png)
-- **AI Accelerator**: Intel Movidius Neural Compute Stick 2 ![Intel Movidius Neural Compute Stick](media/ncs.png)
-- **Gimbal**: 3-axis gimbal ![3-axis gimbal](media/gimbal1.png)
-- **Gimbal Controller**: Storm32 BGCC ![Storm32 BGCC](media/gimbal2.png)
-- **Camera**: Pi Camera v2 
-- **Communication**: UDP socket streaming
+<div align="center">
+
+| | |
+| :---: | :---: |
+| **Main Controller**<br>Raspberry Pi 4 or 5<br>![Raspberry Pi](media/raspberry_pi.png) | **AI Accelerator**<br>Intel Movidius NCS 2<br>![Intel Movidius](media/ncs.png) |
+| **Gimbal System**<br>3-axis gimbal<br>![3-axis gimbal](media/gimbal1.png) | **Gimbal Controller**<br>Storm32 BGCC<br>![Storm32 BGCC](media/gimbal2.png) |
+| **Camera**<br>Pi Camera v2<br>![Pi Camera](media/pi_camera.png) | **Communication**<br>UDP socket streaming |
+
+</div>
 
 ## Results & Metrics
 - Accuracy: 90%+ on custom dataset (mAP@0.5 ~0.85 for YOLOv8s).
