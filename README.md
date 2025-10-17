@@ -4,11 +4,14 @@
 
 A hardware-software system for real-time object detection and tracking using a Raspberry Pi-controlled gimbal. Detects and tracks targets (e.g., vehicles, pedestrians, tanks, armed vehicles, soldiers) in aerial imagery, with integration to a ground control UI.
 
-![Demo GIF](media/demo.gif)
-*demo showcasing the system with the PC configured as the processing unit*
+<div align="center">
 
-![model GPU Demo](media/model_demo.gif)
-*demo showcasing best model running on GPU with real-time inference*
+| System Demo | HyperDet GPU Demo |
+| :---: | :---: |
+| ![Demo GIF](media/demo.gif) | ![HyperDet GPU Demo](media/model_demo.gif) |
+| *PC as processing unit* | *Best model running on GPU with real-time inference* |
+
+</div>
 
 This project was developed as part of a security drone internship at Electronic Systems Research and Development Unit (Feb-Jun 2025), combining AI vision with mechanical control.
 
