@@ -7,6 +7,9 @@ A hardware-software system for real-time object detection and tracking using a R
 ![Demo GIF](media/demo.gif)
 *demo showcasing the system with the PC configured as the processing unit*
 
+![model GPU Demo](media/model_demo.gif)
+*demo showcasing best model running on GPU with real-time inference*
+
 This project was developed as part of a security drone internship at Electronic Systems Research and Development Unit (Feb-Jun 2025), combining AI vision with mechanical control.
 
 ## Features
